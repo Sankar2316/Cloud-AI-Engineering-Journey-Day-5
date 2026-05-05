@@ -107,6 +107,60 @@ Private Subnet (Database)
 * Network security layers
 
 ---
+# 🚀 Mini Project – VPC Architecture Setup
+
+## 📌 Objective
+
+Design a secure cloud network using VPC with public and private subnets.
+
+---
+
+## 🏗️ Architecture
+
+* Public Subnet → Web Server (EC2)
+* Private Subnet → Backend / Database
+* Internet Gateway → Internet access
+* NAT Gateway → Private subnet outbound access
+
+---
+
+## ⚙️ Steps
+
+1. Create VPC (10.0.0.0/16)
+2. Create Subnets:
+
+   * Public Subnet (10.0.1.0/24)
+   * Private Subnet (10.0.2.0/24)
+3. Attach Internet Gateway
+4. Create Route Table:
+
+   * Public → IGW
+5. Launch EC2 in Public Subnet
+6. (Optional) Setup NAT Gateway for Private Subnet
+
+---
+
+## 🔐 Security
+
+* Allow HTTP/SSH in Security Group
+* Keep DB in private subnet
+
+---
+
+## 🌍 Outcome
+
+* Public EC2 accessible from internet
+* Private resources secured
+
+---
+
+## 🧠 Learning
+
+* Real VPC architecture
+* Subnet isolation
+* Secure networking
+
+---
 
 ## 🚀 Next Step (Day 06)
 
